@@ -1,0 +1,40 @@
+{% load static %}
+
+<head>
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+
+<div class="portal_manager">
+    <div class="portal_manager_header">
+        <h2>Portal Manager</h2>
+    </div>
+
+    <div class="portal_manager_box">
+        <div class="portal_manager_tab">
+            <a href="https://skillsbuild.org/log-in" target="_blank">
+                <i class="fas fa-link"></i> IBM Skills Build
+            </a>
+            <div>
+                <i class="fas fa-trash-alt"></i>
+            </div>
+        </div>
+        <div class="portal_manager_tab">
+            <a href="https://skillsbuild.org/log-in" target="_blank">
+                <i class="fas fa-link"></i> ACCES WIT Portal
+            </a>
+            <div>
+                <i class="fas fa-trash-alt"></i>
+            </div>
+        </div>
+    </div>
+    <div class="portal_manager_btn_container">
+        <a class="portal_manager_btn" href="{% url 'create-room' %}">
+            <i class="fas fa-plus"></i>
+            Add Portal to My Manager
+        </a>
+    </div>
+</div>

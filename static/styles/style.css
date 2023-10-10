@@ -728,6 +728,96 @@ a {
 }
 
 /*==============================
+=>  Portal Manager
+================================*/
+
+.portal_manager {
+  background: var(--color-dark);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.portal_manager_header h2 {
+  background-color: var(--color-dark-light);
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  color: var(--color-light);
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+}
+
+.portal_manager_box {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  border: 2px solid var(--color-dark-medium);
+  border-radius: 5px;
+}
+
+.portal_manager_tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-trash-alt {
+  color: var(--color-main);
+}
+
+.fa-backspace:hover {
+  cursor: pointer;
+}
+
+.portal_manager_btn_container {
+  margin: 1.5rem;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  gap: 1rem;
+}
+
+.portal_manager_btn {
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+}
+
+.portal_manager_btn--link {
+  border-radius: 0;
+  padding: 0;
+  color: var(--color-main);
+  box-shadow: none;
+}
+
+.portal_manager_btn:hover {
+  text-decoration: none;
+}
+
+.portal_manager_btn {
+  background-color: var(--color-main);
+  color: var(--color-dark);
+}
+
+.portal_manager_btn:hover {
+  opacity: 0.9;
+}
+
+.portal_manager_btn > svg {
+  fill: currentColor;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+/*==============================
 =>  Activities
 ================================*/
 
