@@ -8,6 +8,13 @@ class Topic(models.Model):
     class Meta:
         ordering = ['name']
 
+    # TODO: first sort by the number of rooms in each topic
+    # then sort by the name of the topic
+
+    # sort the topics by the number of rooms in each topic
+    # def total_rooms(self):
+    #     return self.rooms.count()
+
     def __str__(self):
         return self.name
 
