@@ -761,11 +761,20 @@ a {
   align-items: center;
 }
 
+.other_portal_Content {
+  color: var(--color-light);
+}
+
+.other_portal_Content:hover {
+  color: var(--color-main);
+  transition: all ease-in-out 0.3s;
+}
+
 .fa-trash-alt {
   color: var(--color-main);
 }
 
-.fa-backspace:hover {
+.fa-trash-alt:hover {
   cursor: pointer;
 }
 
@@ -800,15 +809,12 @@ a {
 
 .portal_manager_btn:hover {
   text-decoration: none;
+  opacity: 0.9;
 }
 
 .portal_manager_btn {
   background-color: var(--color-main);
   color: var(--color-dark);
-}
-
-.portal_manager_btn:hover {
-  opacity: 0.9;
 }
 
 .portal_manager_btn > svg {
