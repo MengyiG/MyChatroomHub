@@ -14,16 +14,19 @@
     </div>
 
     <div class="portal_manager_box">
-        <div class="portal_manager_tab">
+        <p>start</p>
+        {% for portal in potals %}
+        <p>{{ portal.title }}</p>
+        <p>{{ portal.link }}</p>
+        {% endfor %}
+        <!-- <div class="portal_manager_tab">
             <a class="other_portal_Content" href="https://skillsbuild.org/log-in" target="_blank">
-                <i class="fas fa-link"></i> IBM Skills Build
+                <i class="fas fa-link"></i>
             </a>
-
             <div>
                 <i class="fas fa-trash-alt"></i>
             </div>
-        </div>
-
+        </div> -->
         <div class="portal_manager_tab">
             <a class="other_portal_Content" href="https://skillsbuild.org/log-in" target="_blank">
                 <i class="fas fa-link"></i> ACCES WIT Portal
@@ -32,30 +35,9 @@
                 <i class="fas fa-trash-alt"></i>
             </div>
         </div>
-
-        <div class="portal_manager_tab">
-            <a class="other_portal_Content" href="https://prepr.org/" target="_blank">
-                <i class="fas fa-link"></i> Prepr Portal
-            </a>
-
-            <div>
-                <i class="fas fa-trash-alt"></i>
-            </div>
-        </div>
-
-        <div class="portal_manager_tab">
-            <a class="other_portal_Content" href="https://info.credly.com/" target="_blank">
-                <i class="fas fa-link"></i> Credly
-            </a>
-
-            <div>
-                <i class="fas fa-trash-alt"></i>
-            </div>
-        </div>
-
     </div>
     <div class="portal_manager_btn_container">
-        <a class="portal_manager_btn" href="{% url 'create-room' %}">
+        <a class="portal_manager_btn" href="{% url 'create-portal' %}">
             <i class="fas fa-plus"></i>
             Add Portal to My Manager
         </a>

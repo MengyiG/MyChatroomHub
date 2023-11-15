@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from .models import Room, Topic, Message
-from .forms import RoomForm, UserForm
+from .forms import PortalForm, RoomForm, UserForm
 
 # rooms = [
 #     {"id": 1, "name": "Let's learn Python"},
@@ -163,16 +163,12 @@ def createRoom(request):
 @login_required(login_url='login')
 def updateRoom(request, pk):
     room = Room.objects.get(id=pk)
-    # this form will be pre-populated with the data from the room instance
     form = RoomForm(instance=room)
 
     if request.user != room.host:
         return HttpResponse("You are not allowed here")
 
     if request.method == "POST":
-        # we use form = RoomForm(request.POST, instance=room) to create a form instance
-        # that is bound to the POST data, add the data to the form
-        # and tell which room instance to update
         form = RoomForm(request.POST, instance=room)
         if form.is_valid():
             form.save()
@@ -223,3 +219,18 @@ def updateUser(request):
             return redirect('user-profile', pk=user.id)
 
     return render(request, "base/update-user.html", {'form': form})
+
+
+@login_required(login_url='login')
+def createPortal(request):
+    portal = request.user.portal_set.all()
+    form = PortalForm()
+    if request.method == "POST":
+        form = PortalForm(request.POST)
+        if form.is_valid():
+            portal = form.save(commit=False)
+            portal.user = request.user
+            portal.save()
+            return redirect('home')
+    context = {'form': form}
+    return render(request, "base/portal_form.html", context)

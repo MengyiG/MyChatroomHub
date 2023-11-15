@@ -22,4 +22,6 @@ urlpatterns = [
     path('delete-room/<str:pk>/', views.deteleRoom, name='delete-room'),
     path('delete-message/<str:pk>/', views.deteleMessage, name='delete-message'),
     path('update-user/', views.updateUser, name='update-user'),
+
+    path('create-portal/', views.createPortal, name='create-portal'),
 ]

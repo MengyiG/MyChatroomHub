@@ -21,4 +21,4 @@ class UserForm(ModelForm):
 class PortalForm(ModelForm):
     class Meta:
         model = Portal
-        fields = ['name', 'link']
+        fields = ['title', 'link']
