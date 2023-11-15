@@ -564,7 +564,7 @@ a {
 .topics__header h2 {
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--color-dark-light);
+  color: var(--color-light);
 }
 
 .topics__list {
